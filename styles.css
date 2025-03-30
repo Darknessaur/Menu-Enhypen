@@ -1,0 +1,238 @@
+body {
+    position: relative;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background-image: url('enhypen_imgot7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('enhypen_imgot7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow: auto;
+}
+
+.jungwon {
+    margin-top: 200px;
+}
+
+
+.container {
+    min-width: 80%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.377);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin: 20px auto;
+}
+
+.topo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.topo .esquerda {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    max-width: 200px;
+    height: auto;
+}
+
+.topo .central {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 350px;
+    height: auto;
+}
+
+
+.topo .direita {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    max-width: 200px;
+    height: auto;
+}
+
+
+
+.membro h2 {
+    text-align: center;
+    font-size: 3.8em;
+    margin: 50px 0;
+    font-family: Caveat;
+    color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+.jungwon-nome {
+    background: linear-gradient(to bottom, yellow, rgb(255, 123, 0));
+}
+
+
+.jay-nome {
+    background: linear-gradient(to bottom, green, rgb(1, 36, 1));
+}
+
+.jake-nome {
+    background: linear-gradient(to bottom, rgb(255, 136, 0), rgb(170, 6, 1));
+}
+
+.sunghoon-nome {
+    background: linear-gradient(to bottom, rgb(24, 86, 255), rgb(34, 1, 95));
+}
+
+.sunoo-nome {
+    background: linear-gradient(to bottom, rgb(253, 176, 189), rgb(240, 65, 65));
+}
+
+.heeseung-nome {
+    background: linear-gradient(to bottom, red, rgb(75, 4, 4));
+}
+
+.niki-nome {
+    background: linear-gradient(to bottom, rgb(212, 0, 212), rgb(48, 3, 48));
+}
+
+
+.membro {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.categoria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+
+
+.membro .categoria {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.card {
+    flex: 0 0 200px;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    flex-shrink: 0;
+    max-width: 200px;
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.6);
+    transition: transform 0.6s ease;
+    transform-origin: center;
+}
+
+.card .front {
+    background-size: cover;
+    background-position: center;
+}
+
+.card .back {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #222222;
+    font-size: 18px;
+    font-family: "Caveat";
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    padding: 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(360deg);
+}
+
+.caveat-uniquifier {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 560;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .categoria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .categoria {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 90%; 
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+    }
+}
